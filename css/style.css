@@ -152,7 +152,8 @@ nav a:hover{ color:var(--white); }
 }
 
 .about-image img{
-  max-width:100%;
+  width:100%;
+  max-width:460px;
   height:auto;
   filter:drop-shadow(0 18px 28px rgba(0,0,0,0.18));
 }
