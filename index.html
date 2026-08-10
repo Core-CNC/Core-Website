@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Core-CNC | CNC Advisory for Manufacturing Businesses</title>
 <meta name="description" content="Core-CNC advises manufacturing businesses on CNC practices, tooling and equipment. Midlands-based, starting local.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -93,17 +96,7 @@
       <h2>Tell us about your operation</h2>
       <p>Based in the Midlands and currently taking on new manufacturing clients across the region. Fill in the form and we'll get back to you.</p>
 
-      <!--
-        FORM SETUP — read this before publishing:
-        This form is wired up for Formspree (a free service for handling contact
-        forms on sites with no server, like this one). To activate it:
-          1. Go to formspree.io and create a free account.
-          2. Create a new form — Formspree will give you a form endpoint URL
-             that looks like https://formspree.io/f/xxxxabcd
-          3. Replace YOUR_FORM_ID below with that ID.
-        Until you do this, the form will not actually send anywhere.
-      -->
-      <form action="https://formspree.io/f/mwlelyre" method="POST" class="contact-form">
+      <form action="https://formspree.io/f/mwlelyre" method="POST" class="contact-form" id="contact-form">
         <div class="form-row">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
@@ -120,8 +113,15 @@
           <label for="message">What are you looking for help with?</label>
           <textarea id="message" name="message" rows="5" required></textarea>
         </div>
-        <button type="submit" class="btn">Send message</button>
+        <button type="submit" class="btn" id="contact-submit">Send message</button>
+        <p class="form-error" id="contact-error" hidden>Something went wrong sending that &mdash; please try again, or email us directly.</p>
       </form>
+
+      <div class="form-success" id="contact-success" hidden>
+        <p class="eyebrow">Message sent</p>
+        <h3>Thanks &mdash; we've got it.</h3>
+        <p>We'll get back to you within a day or two. If it's urgent, feel free to follow up directly.</p>
+      </div>
     </div>
   </section>
 
@@ -133,6 +133,40 @@
     <span>core-cnc.com</span>
   </div>
 </footer>
+
+<script>
+(function(){
+  var form = document.getElementById('contact-form');
+  var success = document.getElementById('contact-success');
+  var errorMsg = document.getElementById('contact-error');
+  var submitBtn = document.getElementById('contact-submit');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errorMsg.hidden = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response){
+      if (response.ok) {
+        form.hidden = true;
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    }).catch(function(){
+      errorMsg.hidden = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send message';
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
