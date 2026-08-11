@@ -130,9 +130,79 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <span>&copy; 2026 Core-CNC. All rights reserved.</span>
+    <span class="footer-links"><a href="privacy.html">Privacy Policy</a> &middot; <a href="#" id="cookie-preferences-link">Cookie Preferences</a></span>
     <span>core-cnc.com</span>
   </div>
 </footer>
+
+<div class="cookie-banner" id="cookie-banner" hidden>
+  <div class="cookie-banner-inner">
+    <p>We'd like to use Google Analytics to see how visitors use this site. It only runs if you say yes &mdash; see our <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <div class="cookie-actions">
+      <button type="button" class="cookie-decline" id="cookie-decline">No thanks</button>
+      <button type="button" class="btn" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var GA_ID = 'G-DS7S5302N6';
+  var STORAGE_KEY = 'cc_analytics_consent';
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  var prefsLink = document.getElementById('cookie-preferences-link');
+
+  function loadAnalytics(){
+    if (window.gaLoaded) return;
+    window.gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  function showBanner(){
+    banner.hidden = false;
+    document.body.classList.add('cookie-banner-visible');
+  }
+
+  function hideBanner(){
+    banner.hidden = true;
+    document.body.classList.remove('cookie-banner-visible');
+  }
+
+  var consent = localStorage.getItem(STORAGE_KEY);
+  if (consent === 'accepted') {
+    loadAnalytics();
+  } else if (consent !== 'declined') {
+    showBanner();
+  }
+
+  acceptBtn.addEventListener('click', function(){
+    localStorage.setItem(STORAGE_KEY, 'accepted');
+    loadAnalytics();
+    hideBanner();
+  });
+
+  declineBtn.addEventListener('click', function(){
+    localStorage.setItem(STORAGE_KEY, 'declined');
+    hideBanner();
+  });
+
+  if (prefsLink) {
+    prefsLink.addEventListener('click', function(e){
+      e.preventDefault();
+      showBanner();
+    });
+  }
+})();
+</script>
 
 <script>
 (function(){

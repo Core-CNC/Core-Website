@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Core-CNC</title>
+<meta name="description" content="How Core-CNC collects, uses, and protects your information.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 100 100" class="brand-mark"><path d="M 70 20 A 35 35 0 1 0 70 80" stroke="#ffffff" stroke-width="12" fill="none" stroke-linecap="square"/><rect x="58" y="44" width="14" height="12" fill="#ff6d3f"/></svg>
+      <span>CORE<em>-CNC</em></span>
+    </a>
+    <nav>
+      <a href="index.html">Back to site</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container narrow legal-content">
+      <p class="eyebrow">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: 11 August 2026</p>
+
+      <h2>Who we are</h2>
+      <p>Core-CNC ("we," "us") is a CNC advisory business based in the Midlands, UK. You can reach us at <a href="mailto:info@core-cnc.com">info@core-cnc.com</a>.</p>
+
+      <h2>Information we collect</h2>
+      <p><strong>When you contact us.</strong> If you use the contact form on this site, we collect the name, company, email address, and message you provide. It's delivered to us via Formspree, a third-party form processing service, so we can respond to your enquiry.</p>
+      <p><strong>When you browse the site.</strong> If you accept the cookie banner shown on your first visit, we use Google Analytics to understand how visitors use the site &mdash; pages viewed, approximate location, and device or browser type. This only runs if you actively accept it. If you decline, no analytics data is collected about your visit.</p>
+
+      <h2>Cookies</h2>
+      <p>This site uses one type of cookie: an analytics cookie set by Google Analytics, and only after you accept it via the banner. You can change your mind at any time using the "Cookie Preferences" link in the footer of any page.</p>
+
+      <h2>How we use your information</h2>
+      <p>Contact form submissions are used only to respond to your enquiry. Analytics data is used in aggregate to understand and improve the site &mdash; we don't use it to identify individual visitors.</p>
+
+      <h2>Who we share it with</h2>
+      <p>Formspree processes contact form submissions on our behalf. Google processes analytics data under its own privacy policy, available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>. We don't sell or share your information with anyone else.</p>
+
+      <h2>Your rights</h2>
+      <p>Under UK GDPR, you can ask what personal data we hold about you, request a correction or deletion, and object to how it's used. To do any of this, email <a href="mailto:info@core-cnc.com">info@core-cnc.com</a>. You can also raise a concern with the UK's Information Commissioner's Office at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a> if you feel it hasn't been handled properly.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy occasionally as the site, or how we use it, changes. Check back here for the latest version.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>&copy; 2026 Core-CNC. All rights reserved.</span>
+    <span class="footer-links"><a href="privacy.html">Privacy Policy</a> &middot; <a href="#" id="cookie-preferences-link">Cookie Preferences</a></span>
+    <span>core-cnc.com</span>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookie-banner" hidden>
+  <div class="cookie-banner-inner">
+    <p>We'd like to use Google Analytics to see how visitors use this site. It only runs if you say yes &mdash; see our <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <div class="cookie-actions">
+      <button type="button" class="cookie-decline" id="cookie-decline">No thanks</button>
+      <button type="button" class="btn" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var GA_ID = 'G-DS7S5302N6';
+  var STORAGE_KEY = 'cc_analytics_consent';
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  var prefsLink = document.getElementById('cookie-preferences-link');
+
+  function loadAnalytics(){
+    if (window.gaLoaded) return;
+    window.gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  function showBanner(){
+    banner.hidden = false;
+    document.body.classList.add('cookie-banner-visible');
+  }
+
+  function hideBanner(){
+    banner.hidden = true;
+    document.body.classList.remove('cookie-banner-visible');
+  }
+
+  var consent = localStorage.getItem(STORAGE_KEY);
+  if (consent === 'accepted') {
+    loadAnalytics();
+  } else if (consent !== 'declined') {
+    showBanner();
+  }
+
+  acceptBtn.addEventListener('click', function(){
+    localStorage.setItem(STORAGE_KEY, 'accepted');
+    loadAnalytics();
+    hideBanner();
+  });
+
+  declineBtn.addEventListener('click', function(){
+    localStorage.setItem(STORAGE_KEY, 'declined');
+    hideBanner();
+  });
+
+  if (prefsLink) {
+    prefsLink.addEventListener('click', function(e){
+      e.preventDefault();
+      showBanner();
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
