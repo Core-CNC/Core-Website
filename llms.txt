@@ -14,7 +14,7 @@ Core-CNC works with manufacturing businesses across the Midlands, bringing hands
 
 - [Home](https://core-cnc.com/): overview of Core-CNC's services, approach, and a contact form for new enquiries.
 - [Privacy Policy](https://core-cnc.com/privacy.html): how Core-CNC collects, uses and protects visitor information, including cookies and analytics.
-- [Blog](https://core-cnc.com/blog/index.html): practical articles on CNC practices, tooling and equipment.
+- [Blog](https://core-cnc.com/blog/blog.html): practical articles on CNC practices, tooling and equipment.
 
 ## Blog posts
 
