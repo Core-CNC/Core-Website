@@ -1,0 +1,22 @@
+# Core-CNC
+
+> Core-CNC is an independent CNC advisory business based in the Midlands, UK, helping manufacturing companies improve their CNC practices, tooling choices, and equipment decisions.
+
+Core-CNC works with manufacturing businesses across the Midlands, bringing hands-on, shop-floor experience rather than theoretical consulting. The advisory has no ties to any tooling or equipment supplier, so recommendations are based on what's right for the client.
+
+## Services
+
+- CNC Practices & Process Review: an honest look at how a CNC operation runs today, and where efficiency, consistency and part quality can be improved without a full overhaul.
+- Tooling Selection & Optimisation: independent guidance on cutting tools and tooling strategy, matched to a client's materials, machines and production goals.
+- Equipment Advisory: impartial advice before committing to new machine tools or equipment, so the investment fits how the shop actually works.
+
+## Pages
+
+- [Home](https://core-cnc.com/): overview of Core-CNC's services, approach, and a contact form for new enquiries.
+- [Privacy Policy](https://core-cnc.com/privacy.html): how Core-CNC collects, uses and protects visitor information, including cookies and analytics.
+
+## Contact
+
+- Email: info@core-cnc.com
+- Hours: Monday to Friday, 9am to 5pm
+- Location: Midlands, UK
