@@ -225,6 +225,13 @@ nav a:hover{ color:var(--white); }
   box-shadow:0 2px 10px rgba(0,0,0,0.06);
 }
 
+.hours{
+  color:var(--muted);
+  font-size:0.9rem;
+  margin-top:-10px;
+  margin-bottom:16px;
+}
+
 .form-row{ margin-bottom:20px; }
 
 .form-row label{
@@ -370,6 +377,23 @@ nav a:hover{ color:var(--white); }
 }
 
 .legal-content p{ margin-bottom:16px; }
+
+/* Social links */
+.social-links{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.social-links a{
+  color:#9a9da3;
+  display:inline-flex;
+  transition:color 0.15s ease;
+}
+
+.social-links a:hover{ color:var(--orange); }
+
+.social-links svg{ display:block; }
 
 /* Footer */
 .site-footer{
