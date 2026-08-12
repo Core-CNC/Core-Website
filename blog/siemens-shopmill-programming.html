@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | Core-CNC</title>
-<meta name="description" content="How Core-CNC collects, uses, and protects your information.">
-<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<link rel="alternate icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css?v=4">
+<title>Siemens ShopMill programming: why it's so user-friendly | Core-CNC</title>
+<meta name="description" content="What Siemens ShopMill conversational programming is, why operators find it easier than G-code, and where it has limits.">
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<link rel="stylesheet" href="../css/style.css?v=4">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html" class="brand">
+    <a href="../index.html" class="brand">
       <svg viewBox="0 0 100 100" class="brand-mark"><path d="M 70 20 A 35 35 0 1 0 70 80" stroke="#ffffff" stroke-width="12" fill="none" stroke-linecap="square"/><rect x="58" y="44" width="14" height="12" fill="#ff6d3f"/></svg>
       <span>CORE<em>-CNC</em></span>
     </a>
     <nav>
-      <a href="index.html">Back to site</a>
-      <a href="blog/index.html">Blog</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#why">Why Us</a>
+      <a href="index.html">Blog</a>
+      <a href="../index.html#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -28,31 +31,23 @@
 <main>
   <section class="section">
     <div class="container narrow legal-content">
-      <p class="eyebrow">Legal</p>
-      <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 11 August 2026</p>
+      <p class="eyebrow">Programming</p>
+      <h1>Siemens ShopMill programming: why it's so user-friendly</h1>
+      <p class="updated">12 August 2026</p>
 
-      <h2>Who we are</h2>
-      <p>Core-CNC ("we," "us") is a CNC advisory business based in the Midlands, UK. You can reach us at <a href="mailto:info@core-cnc.com">info@core-cnc.com</a>.</p>
+      <p>For shops running Siemens Sinumerik controls, ShopMill is often the reason an operator can get a job running without waiting for someone to write G-code from scratch.</p>
 
-      <h2>Information we collect</h2>
-      <p><strong>When you contact us.</strong> If you use the contact form on this site, we collect the name, company, email address, and message you provide. It's delivered to us via Formspree, a third-party form processing service, so we can respond to your enquiry.</p>
-      <p><strong>When you browse the site.</strong> If you accept the cookie banner shown on your first visit, we use Google Analytics to understand how visitors use the site &mdash; pages viewed, approximate location, and device or browser type. This only runs if you actively accept it. If you decline, no analytics data is collected about your visit.</p>
+      <h2>What ShopMill actually is</h2>
+      <p>ShopMill is Siemens' conversational programming language for milling, built on the same underlying cycles as G-code but arranged around the operation rather than the individual line of code. Instead of writing out tool calls, feeds, speeds and approach moves as separate blocks, ShopMill packages all of that into a single cycle where the operator just fills in the parameters for the job in front of them.</p>
 
-      <h2>Cookies</h2>
-      <p>This site uses one type of cookie: an analytics cookie set by Google Analytics, and only after you accept it via the banner. You can change your mind at any time using the "Cookie Preferences" link in the footer of any page.</p>
+      <h2>Why operators get on with it</h2>
+      <p>The programs are shorter and easier to read back, because a single cycle does the work of several lines of G-code. Tool selection, cutting parameters and the approach and retract moves are all handled inside that cycle, rather than needing to be coordinated by hand. It's also built around how a machinist actually thinks about a job, face it, drill it, pocket it, rather than around individual machine movements, which makes it far quicker to pick up for someone without a background in G-code.</p>
 
-      <h2>How we use your information</h2>
-      <p>Contact form submissions are used only to respond to your enquiry. Analytics data is used in aggregate to understand and improve the site &mdash; we don't use it to identify individual visitors.</p>
+      <h2>Where it has limits</h2>
+      <p>ShopMill covers the operations most shops run day to day extremely well, but it's built on fixed cycles. Anything outside those, a genuinely custom toolpath or an unusual movement, still needs G-code. In practice, most shops end up using both: ShopMill for the everyday work, and G-code where the job actually calls for it.</p>
 
-      <h2>Who we share it with</h2>
-      <p>Formspree processes contact form submissions on our behalf. Google processes analytics data under its own privacy policy, available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>. We don't sell or share your information with anyone else.</p>
-
-      <h2>Your rights</h2>
-      <p>Under UK GDPR, you can ask what personal data we hold about you, request a correction or deletion, and object to how it's used. To do any of this, email <a href="mailto:info@core-cnc.com">info@core-cnc.com</a>. You can also raise a concern with the UK's Information Commissioner's Office at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a> if you feel it hasn't been handled properly.</p>
-
-      <h2>Changes to this policy</h2>
-      <p>We may update this policy occasionally as the site, or how we use it, changes. Check back here for the latest version.</p>
+      <p><a href="../index.html#contact">Get in touch</a> if you'd like to talk through how this applies to your operation.</p>
+      <p><a href="index.html">&larr; Back to all posts</a></p>
     </div>
   </section>
 </main>
@@ -60,7 +55,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <span>&copy; 2026 Core-CNC. All rights reserved.</span>
-    <span class="footer-links"><a href="privacy.html">Privacy Policy</a> &middot; <a href="#" id="cookie-preferences-link">Cookie Preferences</a></span>
+    <span class="footer-links"><a href="../privacy.html">Privacy Policy</a> &middot; <a href="#" id="cookie-preferences-link">Cookie Preferences</a></span>
     <span class="social-links">
       <!-- TODO: replace # with the real Instagram profile URL -->
       <a href="#" aria-label="Core-CNC on Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg></a>
@@ -73,7 +68,7 @@
 
 <div class="cookie-banner" id="cookie-banner" hidden>
   <div class="cookie-banner-inner">
-    <p>We'd like to use Google Analytics to see how visitors use this site. It only runs if you say yes &mdash; see our <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <p>We'd like to use Google Analytics to see how visitors use this site. It only runs if you say yes &mdash; see our <a href="../privacy.html">Privacy Policy</a> for details.</p>
     <div class="cookie-actions">
       <button type="button" class="cookie-decline" id="cookie-decline">No thanks</button>
       <button type="button" class="btn" id="cookie-accept">Accept</button>

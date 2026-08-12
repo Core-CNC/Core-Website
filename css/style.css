@@ -200,6 +200,33 @@ nav a:hover{ color:var(--white); }
   margin-bottom:0;
 }
 
+/* Blog cards */
+.blog-card .post-date{
+  color:var(--muted);
+  font-size:0.8rem;
+  margin-bottom:10px;
+}
+
+.blog-card h3{ margin-bottom:10px; }
+
+.blog-card h3 a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.blog-card h3 a:hover{ color:var(--orange); }
+
+.blog-card p{ margin-bottom:16px; }
+
+.blog-card .read-more{
+  color:var(--orange);
+  font-weight:700;
+  font-size:0.9rem;
+  text-decoration:none;
+}
+
+.blog-card .read-more:hover{ text-decoration:underline; }
+
 /* Why list */
 .why-list{
   list-style:none;

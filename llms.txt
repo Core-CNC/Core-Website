@@ -14,6 +14,15 @@ Core-CNC works with manufacturing businesses across the Midlands, bringing hands
 
 - [Home](https://core-cnc.com/): overview of Core-CNC's services, approach, and a contact form for new enquiries.
 - [Privacy Policy](https://core-cnc.com/privacy.html): how Core-CNC collects, uses and protects visitor information, including cookies and analytics.
+- [Blog](https://core-cnc.com/blog/index.html): practical articles on CNC practices, tooling and equipment.
+
+## Blog posts
+
+- [Five signs your CNC tooling strategy is costing you more than it should](https://core-cnc.com/blog/five-signs-tooling-strategy-costing-you.html): five practical signs a tooling strategy is quietly costing money, and what to check first.
+- [What to check before your next CNC equipment purchase](https://core-cnc.com/blog/equipment-purchase-checklist.html): what to check before buying CNC equipment, beyond the headline spec sheet.
+- [Common CNC process bottlenecks we see on the shop floor](https://core-cnc.com/blog/process-bottlenecks-shop-floor.html): the process bottlenecks that come up again and again on the shop floor.
+- [Runout is costing you thousands](https://core-cnc.com/blog/runout-costing-you-thousands.html): how tool runout quietly drives up tooling costs, scrap and rework.
+- [Siemens ShopMill programming: why it's so user-friendly](https://core-cnc.com/blog/siemens-shopmill-programming.html): what Siemens ShopMill conversational programming is and why operators find it easier than G-code.
 
 ## Contact
 
